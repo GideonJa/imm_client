@@ -11,15 +11,6 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131231025531) do
-
-  create_table "users", :force => true do |t|
-    t.integer  "person_id"
-    t.string   "state"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "users", ["person_id"], :name => "index_users_on_person_id", :unique => true
+ActiveRecord::Schema.define(:version => 0) do
 
 end

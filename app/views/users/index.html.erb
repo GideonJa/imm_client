@@ -1,8 +1,10 @@
-<% if @users.blank? %>
+
+<% if @http_code.to_i != 200 %>
+  <h2> Could not process the request HTTP code <%=@http_code%> </h2>
+<% elsif @users.blank? %>
   <h1>Sorry, person was not found in our records </h1>
 <%else%>
   <h1>Listing users</h1>
-
   
   <table>
     <tr>

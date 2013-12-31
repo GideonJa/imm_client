@@ -14,10 +14,10 @@ class UsersController < ApplicationController
 
     query = request.env["QUERY_STRING"]
     @response = HTTParty.get(base + "?" + query)
-    raise @response.code.inspect
+    @http_code =  @response.code.inspect
 
      @users={}
-    unless @response.blank?
+    unless @response.blank? || @http_code == 200
       @users[:person_id]  = @response.parsed_response.first['person_id']
       @users[:state]      = @response.parsed_response.first['state']
       @users[:severity]   = @response.parsed_response.first['severity']
