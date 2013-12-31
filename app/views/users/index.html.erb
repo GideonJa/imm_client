@@ -1,0 +1,32 @@
+<% if @users.blank? %>
+  <h1>Sorry, person was not found in our records </h1>
+<%else%>
+  <h1>Listing users</h1>
+
+  
+  <table>
+    <tr>
+      <th>Person</th>
+      <th>State</th>
+      <th>Status</th>
+      <th>Severity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+  
+    <tr>
+      <td><%= @users[:person_id] %></td>
+      <td><%= @users[:state] %></td>
+      <td><%= @users[:status] %></td>
+      <td><%= @users[:severity] %></td>
+    </tr>
+  
+  </table>
+
+  <br />
+
+
+<%end %>
+<%= link_to 'back', root_path %>

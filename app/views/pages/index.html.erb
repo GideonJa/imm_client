@@ -1,0 +1,9 @@
+<%= form_tag "/users", :method => "GET" do %>
+    <label>Person ID</label>
+    <%= text_field_tag 'person_id' %><br />
+    <label>States </label>
+    <%= select_tag "state", 
+        options_for_select(STATES, :selected => "FL"), :style => "margin-left: 18px;" %><br /><br />
+
+    <%= submit_tag "Search", :class => "btn btn-large btn-green1-link", :style => "margin-top:10px;" %>
+  <% end %>
