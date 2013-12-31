@@ -9,7 +9,8 @@ class UsersController < ApplicationController
     if Rails.env.development?
       base = 'http://localhost:3000/users/search.json'
     else
-      base = 'http://calm-springs-4739.herokuapp.com/users/search.json'
+      base = 'http://imm-server.herokuapp.com.herokuapp.com/users/search.json'
+      
     end
 
     query = request.env["QUERY_STRING"]
